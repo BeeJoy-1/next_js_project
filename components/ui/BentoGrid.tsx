@@ -19,7 +19,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid md:auto-rows-[7rem] grid-cols-1 md:grid-cols-5 gap-8 max-w-8xl mx-auto py-1 ",
+        "grid md:auto-rows-[7rem] grid-cols-1 md:grid-cols-5 gap-5 lg:gap-8 max-w-8xl mx-auto py-1 ",
         className
       )}
     >
@@ -70,7 +70,7 @@ export const BentoGridItem = ({
       }}
     >
 
-        <div className={`${id === 6} && 'flex justify-center h-full'`}>
+        <div className={`${id === 6 && 'flex justify-center'} h-full'`}>
           <div className="w-full h-full absolute">
             {img && (
               <img 
@@ -94,20 +94,20 @@ export const BentoGridItem = ({
           <div>
             {id === 6 && (
               <BackgroundGradientAnimation>
-                  <div className=" absolute z-50 flex items-center justify-center text-white font-bold">
+                  {/* <div className=" absolute z-50 flex items-center justify-center text-white font-bold">
 
-                  </div>
+                  </div> */}
               </BackgroundGradientAnimation>
             )
             }
           </div>
           <div className={cn(
-            titleClassName, 'group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10 '
+            titleClassName, 'group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-20 flex flex-col px-5 p-5 lg:p-5 '
           )}>
             <div className="font-sans font-extralight text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10">
               {description}
             </div>
-            <div className="font-sans font-bold text-lg lg:text-3xl min-w-96 z-10 ">
+            <div className="font-sans font-bold text-lg lg:text-xl  md:mb-[-45px] min-w-50 z-10  ">
               {title}
             </div>
             <div>
@@ -138,7 +138,7 @@ export const BentoGridItem = ({
               )}
 
               {id === 6 && (
-                <div className="mt-5 relative">
+                <div className="mt-3 relative">
                   <div className={`absolute -bottom-5 right-0`}>
                     <Lottie options={{
                       loop: copied,
