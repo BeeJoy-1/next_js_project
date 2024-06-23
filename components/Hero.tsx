@@ -27,7 +27,7 @@ const Hero = () => {
                 />
 
                 <p className='tex-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
-                    Hi, I&apos;m Bijoy, a Font-end Developer. 
+                    Hi, I&apos;m Bijoy, a Front-end Developer. 
                 </p>
 
                 <a href="#about">
